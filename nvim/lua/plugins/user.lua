@@ -121,11 +121,11 @@ return {
   },
 
   {
-  "folke/tokyonight.nvim",
-  lazy = false,
-  priority = 1000,
-  opts = {},
-},
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
   --[[{
     "catppuccin/nvim",
     name = "catppuccin",
@@ -159,5 +159,11 @@ return {
         hl = { underline = true },
       },
     },
+  },
+  {
+    "danymat/neogen",
+    config = true,
+    -- Uncomment next line if you want to follow only stable versions
+    -- version = "*"
   },
 }
