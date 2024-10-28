@@ -29,6 +29,9 @@ opt.autoindent = true -- copy indent from current line when starting new one
 opt.foldlevel = 1
 opt.foldmethod = indent
 
+opt.clipboard="unnamedplus"
+
+
 opt.wrap = false
 
 local tppscript = "au BufNewFile,BufRead *.tpp set filetype=cpp"
