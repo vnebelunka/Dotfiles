@@ -1,31 +1,29 @@
 return {
-  cmd = {
-    "clangd",
-    "--background-index",
-    "--clang-tidy",
-    "--header-insertion=iwyu",
-    "--completion-style=detailed",
-    "--function-arg-placeholders",
-    "--fallback-style={google, ColumnLimit: 120}",
-  },
-  root_markers = {
-    "Makefile",
-    "configure.ac",
-    "configure.in",
-    "config.h.in",
-    "meson.build",
-    "meson_options.txt",
-    "build.ninja",
-    "compile_commands.json",
-    "compile_flags.txt",
-    ".git",
-  },
-  init_options = {
-    usePlaceholders = true,
-    completeUnimported = true,
-    clangdFileStatus = true,
-  },
+  cmd =
+      {
+          "clangd",
+          "--compile-commands-dir=build",
+          "--background-index",
+          "--clang-tidy",
+          "--header-insertion=iwyu",
+          "--completion-style=detailed",
+          "--function-arg-placeholders",
+          "--fallback-style={google, ColumnLimit: 120}",
+      },
+  root_markers =
+      {
+          "Makefile",    "configure.ac",          "configure.in",
+          "config.h.in", "meson.build",           "meson_options.txt",
+          "build.ninja", "compile_commands.json", "compile_flags.txt",
+          ".git",
+      },
+  init_options =
+      {
+          usePlaceholders = true,
+          completeUnimported = true,
+          clangdFileStatus = true,
+      },
   capabilities = {
-    offsetEncoding = { "utf-16" },
+      offsetEncoding = {"utf-16"},
   },
 }
